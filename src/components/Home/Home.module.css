@@ -1,0 +1,50 @@
+.showcase {
+    margin-top: 10%;
+    position: relative;
+}
+
+.showcaseLeft {
+    margin-top: 2%;
+}
+
+.showcaseTitle {
+    position: relative;
+    bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.showcaseText {
+    font-family:'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: start;
+    margin: 10px 9px;
+}
+
+.signup {
+    position: absolute;
+    top: 130px;
+    right: 200px;
+    background-color: #3E86FF;
+    border-radius: 20px;
+    width: 150px;
+    height: 45px;
+    color: white;
+    margin-right: 60px;
+    padding: 9px 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;   
+}
+
+.signup:hover {
+    color: white;
+    background-color: #3e82f8;
+    text-decoration: none;
+}
+
+.showcaseRight {
+    position: relative;
+    bottom: 30px;
+}

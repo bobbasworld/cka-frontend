@@ -1,0 +1,29 @@
+.login {
+    color: black;
+    font-weight: 600;
+    text-decoration: none; 
+    margin-top: 5%;
+    margin-right: 20px;
+}
+
+.login:hover {
+    color: #3e82f8;
+    text-decoration: none;
+}
+
+.signup {
+    background-color: #3E86FF;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    padding: 7px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;   
+}
+
+.signup:hover {
+    color: white;
+    background-color: #3e82f8;
+    text-decoration: none;
+}

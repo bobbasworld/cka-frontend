@@ -1,0 +1,31 @@
+.signupForm {
+    /* position: relative; */
+    margin-top: 5%;
+    width: 35%;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.formInput {
+    text-align: center;
+    height: 45px;
+    border-radius: 20px;
+}
+
+.welcomeMessage {
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.signupButton {
+    width: 100%;
+    border-radius: 20px;
+    height: 45px;
+}
+
+.signupText {
+    font-weight: 700;
+    text-align: center;
+}
