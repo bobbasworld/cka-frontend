@@ -27,3 +27,16 @@
     background-color: #3e82f8;
     text-decoration: none;
 }
+
+.navItem {
+    color: black;
+    font-weight: 400;
+    text-decoration: none; 
+    margin-top: 5%;
+    margin-right: 20px;
+}
+
+.active, .navItem:hover{
+    color: #3e82f8;
+    text-decoration: none;
+}
