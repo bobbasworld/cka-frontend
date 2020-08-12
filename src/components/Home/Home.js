@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 import Navbar from '../Navbar/Navbar';
 
@@ -9,6 +9,10 @@ import Drawing from '../../img/home_drawing.png';
 
 
 const Home = () => {
+    const token = localStorage.getItem('token')
+    if (token) {
+        return <Redirect to='/dashboard' />
+    }
     return (
         <Fragment>
             <Navbar />

@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import * as actions from '../../store/actions/auth1';
+import * as actions from '../../store/actions/auth';
 
 import styles from './Login.module.css';
 import Logo from '../../img/cka_logo.png';
@@ -23,16 +23,25 @@ class Login extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
         console.log('values:', this.state)
-        console.log('submit')
+        // axios.post("http://127.0.0.1:8000/rest-auth/login/", {
+        //     username: this.state.email,
+        //     password: this.state.password
+        // })
+        //     .then(res => console.log("Logged In!!!"))
+        //     .catch(err => console.log("login error: ", err))
+        this.props.onAuth(this.state.email, this.state.password)
     }
 
     render() {
 
-        // let errorMessage = null
-        // if (this.props.error) {
-        //     errorMessage = (
-        //         <p className='text-danger'>{this.props.error.message}</p>
-        //     )
+        let errorMessage = null
+        if (this.props.error) {
+            errorMessage = (
+                <p className='text-danger'>{this.props.error}</p>
+            )
+        }
+        // if (this.props.isAuthenticated) {
+        //     return <Redirect to="/dashboard" />
         // }
 
         return (
@@ -45,7 +54,7 @@ class Login extends Component {
                     </div>
                 </nav>
                 <div className={`container ${styles.signupForm}`}>
-                    {/* {errorMessage} */}
+                    {errorMessage}
                     <h2 className={styles.formTitle}>Let's get you right into the action!</h2>
                     <form onSubmit={this.handleSubmit} className={styles.form}>
                         <div className="form-group">
@@ -74,22 +83,23 @@ class Login extends Component {
     }
 }
 
-export default Login;
+// export default Login;
 
-// const mapStateToProps = state => {
-//     return {
-//         loading: state.loading,
-//         error: state.error
-//     }
-// }
+const mapStateToProps = state => {
+    return {
+        loading: state.loading,
+        error: state.error,
+        isAuthenticated: state.isAuthenticated
+    }
+}
 
-// const mapDispatchToProps = dispatch => {
-//     return {
-//         onAuth: (username, password) => dispatch(actions.authLogin(username, password))
-//     }
-// }
+const mapDispatchToProps = dispatch => {
+    return {
+        onAuth: (username, password) => dispatch(actions.authLogin(username, password))
+    }
+}
 
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
 
 

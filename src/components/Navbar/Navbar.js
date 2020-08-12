@@ -5,19 +5,36 @@ import { connect } from 'react-redux';
 import Logo from "../../img/cka_logo.png"
 import { Link, NavLink } from 'react-router-dom';
 
-import * as actions from '../../store/actions/auth1';
+import * as actions from '../../store/actions/auth';
+import axios from 'axios';
 
 
 
 
 class Navbar extends Component {
 
-    // componentDidMount() {
-    //     this.props.onTryAutoSignup()
-    // }
 
     handleLogout = (e) => {
         this.props.onLogout()
+        // axios.post('http://127.0.0.1:8000/auth/logout/')
+        //     .then(res => {
+        //         console.log(res)
+        //         console.log('LOGOUT ACTION SUCCESS!')
+        //         localStorage.removeItem('token')
+        //     })
+        //     .catch(err => {
+        //         console.log(err)
+        //     })
+    }
+
+    handleNavClick = (e) => {
+        // const elem = document.querySelectorAll(".navItem");
+        // console.log(elem);
+        // elem.addEventListener('click', () => {
+        //     elem.classList.add('active');
+        // })
+        // e.target.classList.add('active')
+        // console.log(e.target.className)
     }
 
 
@@ -34,32 +51,29 @@ class Navbar extends Component {
 
                     <div className="justify-content-end collapse navbar-collapse" id="navbarNavAltMarkup">
 
-                        {/* <a className="nav-item nav-link active" href="#"><span className="sr-only">(current)</span></a> */}
+                        <a className="nav-item nav-link active" href="#"><span className="sr-only">(current)</span></a>
 
-                        {/* {
+                        {
                             this.props.isAuthenticated ?
                                 (
                                     <div className="navbar-nav">
-                                        <Link className={`${styles.navItem} ${styles.active}`} to="/dashboard">Dashboard</Link>
-                                        <Link className={styles.navItem} to="/lessons">Lessons</Link>
-                                        <Link className={styles.navItem} to="/bites">Bites</Link>
-                                        <Link className={styles.navItem} to="/news">News</Link>
-                                        <Link className={styles.navItem} to="/markets">Markets</Link>
-                                        <Link onClick={this.handleLogout} className={styles.login} to="/login">Logout</Link>
+                                        <NavLink onClick={this.handleNavClick} className={`${styles.navItem}`} to="/dashboard">Dashboard</NavLink>
+                                        <NavLink onClick={this.handleNavClick} className={styles.navItem} to="/lessons">Lessons</NavLink>
+                                        <NavLink onClick={this.handleNavClick} className={styles.navItem} to="/bites">Bites</NavLink>
+                                        <NavLink onClick={this.handleNavClick} className={styles.navItem} to="/news">News</NavLink>
+                                        <NavLink onClick={this.handleNavClick} className={styles.navItem} to="/markets">Markets</NavLink>
+                                        <NavLink onClick={this.handleNavClick} onClick={this.handleLogout} className={styles.login} to="/login">Logout</NavLink>
                                     </div>
                                 )
                                 :
                                 (
                                     <div className="navbar-nav">
-                                        <Link className={styles.login} to="/login">Login</Link>
-                                        <Link className={styles.signup} to="/signup">Sign Up</Link>
+                                        <NavLink className={styles.login} to="/login">Login</NavLink>
+                                        <NavLink className={styles.signup} to="/signup">Sign Up</NavLink>
                                     </div>
                                 )
-                        } */}
-                        <div className="navbar-nav">
-                            <Link className={styles.login} to="/login">Login</Link>
-                            <Link className={styles.signup} to="/signup">Sign Up</Link>
-                        </div>
+                        }
+
                     </div>
                 </div>
             </nav>
@@ -67,19 +81,19 @@ class Navbar extends Component {
     }
 }
 
-export default Navbar;
 
-// const mapStateToProps = state => {
-//     return {
-//         isAuthenticated: state.token !== null
-//     }
-// }
 
-// const mapDispatchToProps = dispatch => {
-//     return {
-//         onLogout: () => dispatch(actions.logout()),
-//         onTryAutoSignup: () => dispatch(actions.authCheckState())
-//     }
-// }
+const mapStateToProps = state => {
+    return {
+        isAuthenticated: state.isAuthenticated
+    }
+}
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
+const mapDispatchToProps = dispatch => {
+    return {
+        onLogout: () => dispatch(actions.logout()),
+        // onTryAutoSignup: () => dispatch(actions.authCheckState())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

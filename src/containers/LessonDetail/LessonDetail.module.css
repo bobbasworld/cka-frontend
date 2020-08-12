@@ -1,0 +1,19 @@
+.lessondetailContainer {
+    width: 60%;
+    margin: 5% auto;
+    text-align: justify;
+    font-family: Montserrat, 'sans-serrif';}
+
+.lessondetailTitle {
+    font-weight: 600;
+    font-size: 23px;
+    text-align: center;
+}
+
+.lessondetailContent {
+    margin-top: 5%;
+    line-height: 2rem;
+    letter-spacing: 0.5px;
+    font-size: 16px;   
+}
+

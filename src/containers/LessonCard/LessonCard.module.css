@@ -1,0 +1,21 @@
+.lessoncardContainer {
+    height: 200px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0.5px 2px 2px #b3aeae;
+    margin: 40px 0;
+    
+}
+
+.lessoncardContainer:hover {
+    cursor: pointer;
+    box-shadow: 0.6px 5px 5px #b3aeae;
+    color: #2979FF;
+
+}
+
+.lessoncardTitle {
+    font-family: Montserrat, 'sans-serrif';
+    font-weight: 600;
+    margin: 35px 0;
+}

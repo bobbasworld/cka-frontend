@@ -1,0 +1,60 @@
+.dashlessonsCard {
+    width: 100%;
+    border-radius: 12px;
+    background-color: #fff;
+    margin-left: 3%;
+    margin-top: 4%;
+    box-shadow: 0.5px 2px 2px #b3aeae;
+    padding: 10px 0;
+}
+
+.dashlessonsHeader {
+    font-family: Montserrat, 'san-serrif';
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.dashlessonsItem {
+    /* position: relative; */
+    background-color: #f8f8f8;
+    width: 500px;
+    border-radius: 8px;
+    margin-left: 3.6%;
+    margin-bottom: 2%;
+    padding-bottom: 6px;
+}
+
+.dashlessonsItemText {
+    font-family: Montserrat, 'san-serrif';
+    font-size: 13px;
+    font-weight: 500;
+    padding-top: 20px;
+    padding-right: 0;
+    padding-left: 30px;
+    text-align: justify;
+    margin-bottom: 0px;
+    padding-bottom: 0;
+}
+
+.dashlessonsId {
+    color: #858585;
+    font-size: 10px;
+    margin-right: 20%;
+}
+
+.dashlessonsLevel {
+    color: #858585;
+    font-size: 12px;
+    font-family: Montserrat, 'sans-serrif';
+    margin-left: 360px
+}
+
+.dashlessonsItemText a {
+    text-decoration: none;
+    color: #000;
+}
+
+.dashlessonsItemText a:hover {
+    text-decoration: none;
+    color: #4184f8;
+}

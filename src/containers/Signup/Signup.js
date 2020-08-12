@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import * as actions from '../../store/actions/auth';
@@ -14,7 +14,7 @@ class Signup extends Component {
         email: '',
         password1: '',
         password2: '',
-        inputError: null
+        inputError: ''
     }
 
     handleChange = (e) => {
@@ -27,24 +27,25 @@ class Signup extends Component {
         e.preventDefault()
         console.log("values: ", this.state)
         // add any form validation here
+        if (this.state.password1 !== this.state.password2) {
+            this.setState({
+                inputError: 'Passwords must match!'
+            })
+            return
+        }
+        this.props.onAuth(this.state.username, this.state.email, this.state.password1, this.state.password2)
         console.log('Signup Submitted!')
+        this.props.history.push('/selectlevel')
     }
 
 
     render() {
-        // let errorMessage = null
-        // if (this.props.error) {
-        //     errorMessage = (
-        //         <p className='text-danger'>{this.props.error.message} <br /> Invalid Credentials!</p>
-        //     )
-        // }
 
-        // let inputError = null
-        // if (this.state.inputError !== null) {
-        //     inputError = (
-        //         <p className='text-danger'>{this.state.inputError}</p>
-        //     )
-        // }
+
+        if (this.props.isAuthenticated) {
+            return <Redirect to='/dashboard' />
+        }
+
 
         return (
             <Fragment>
@@ -58,8 +59,12 @@ class Signup extends Component {
                 </nav>
 
                 <div className={`container ${styles.signupForm}`}>
-                    {/* {errorMessage}
-                    {inputError} */}
+                    {
+                        this.props.error ?
+                            <p className='text-danger'>{this.props.error}</p>
+                            :
+                            null
+                    }
                     <h2 className={styles.formTitle}>Welcome! <br />Let's get you started!</h2>
                     <form onSubmit={this.handleSubmit} className={styles.form}>
                         <div className="form-group">
@@ -74,7 +79,7 @@ class Signup extends Component {
                         <div className="form-group">
                             <input onChange={this.handleChange} value={this.state.password2} name="password2" placeholder="Confirm your password" type="password" className={`form-control ${styles.formInput}`} id="confirmPassword" />
                         </div>
-                        {/* {
+                        {
                             this.props.loading ?
                                 (
                                     <Fragment>
@@ -94,37 +99,34 @@ class Signup extends Component {
                                     </Fragment>
                                 )
 
-                        } */}
-                        <Fragment>
-                            <small className={`form-text text-muted ${styles.welcomeMessage}`}>Welcome to the club!</small>
-                            <button type="submit" className={`btn btn-primary ${styles.signupButton}`}><span className={styles.signupText}>Sign Up</span></button>
-                            <small className={`form-text text-muted ${styles.welcomeMessage}`}>Already have an account? <Link to='/login'>Login</Link></small>
-                        </Fragment>
+                        }
+
 
                     </form>
                 </div>
             </Fragment>
+
         );
     }
 }
 
-export default Signup;
+// export default Signup;
 
-// const mapStateToProps = state => {
-//     return {
-//         loading: state.loading,
-//         error: state.error,
-//         // isAuthenticated: state.token !== null
+const mapStateToProps = state => {
+    return {
+        loading: state.loading,
+        error: state.error,
+        isAuthenticated: state.token !== null
 
-//     }
-// }
+    }
+}
 
-// const mapDispatchToProps = dispatch => {
-//     return {
-//         onAuth: (username, email, password1, password2) => dispatch(actions.authSignup(username, email, password1, password2))
-//     }
-// }
+const mapDispatchToProps = dispatch => {
+    return {
+        onAuth: (username, email, password1, password2) => dispatch(actions.authSignup(username, email, password1, password2))
+    }
+}
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Signup);
+export default connect(mapStateToProps, mapDispatchToProps)(Signup);
 
 

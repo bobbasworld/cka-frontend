@@ -1,0 +1,31 @@
+.lessonsHeader {
+    position: relative;
+    width: 50%;
+    height: 60px;
+    background: #4184f8;
+    border-radius: 12px;
+    color: #fff;
+    margin-left: 24%;
+    margin-top: 4%;
+}
+
+.lessonsTitle {
+    font-size: 20px;
+    font-family: Montserrat, 'sans-serrif';
+    font-weight: 600;
+    width: 45%;
+    margin-left: 27%;
+    padding-top: 3%;
+}
+
+.dotsImage1 {
+    position: absolute;
+    top: 25%;
+    right: 80%;    
+}
+
+.dotsImage2 {
+    position: absolute;
+    top: 25%;
+    left: 80%;
+}

@@ -1,31 +1,32 @@
 import React, { Component } from 'react';
 import './App.css';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PrivateRoute from './components/common/PrivateRoute';
 
 import Home from './components/Home/Home';
 import Signup from './containers/Signup/Signup';
 import Login from './containers/Login/Login';
-import Dashboard from './components/Dashboard/Dashboard';
+import Dashboard from './containers/Dashboard/Dashboard';
 import SelectLevel from './containers/SelectLevel/SelectLevel';
+import Lessons from './containers/Lessons/Lessons';
+import LessonDetail from './containers/LessonDetail/LessonDetail';
+import Bites from './containers/Bites/Bites';
 
-import * as actions from './store/actions/auth1';
+import * as actions from './store/actions/auth';
+import axios from 'axios'
 
 
 class App extends Component {
 
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-  //     token: null
-  //   }
-  // }
+  state = {
+    user: {}
+  }
 
-  // componentDidMount() {
-  //   console.log("COMPONENT DID MOUNT!")
-  //   this.props.onTryAutoSignup()
-  // }
+  componentDidMount() {
+    console.log("COMPONENT DID MOUNT!")
+    this.props.onTryAutoSignup()
+  }
 
 
   render() {
@@ -36,8 +37,11 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/login" component={Login} />
-            <PrivateRoute exact path="/dashboard" component={Dashboard} />
-            <PrivateRoute exact path="/selectlevel" component={SelectLevel} />
+            <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/selectlevel" component={SelectLevel} />
+            <Route exact path="/lessons" component={Lessons} />
+            <Route exact path="/bites" component={Bites} />
+            <Route exact path="/lessons/:title" component={LessonDetail} />
             {/* <Home /> */}
           </Switch>
         </div>
@@ -46,7 +50,7 @@ class App extends Component {
   }
 }
 
-export default App;
+// export default App;
 
 // const mapStateToProps = state => {
 //   return {
@@ -54,11 +58,11 @@ export default App;
 //   }
 // }
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     onTryAutoSignup: () => dispatch(actions.authCheckState())
-//     // onLogout: () => dispatch(actions.logout())
-//   }
-// }
+const mapDispatchToProps = dispatch => {
+  return {
+    onTryAutoSignup: () => dispatch(actions.authCheckState())
+    // onLogout: () => dispatch(actions.logout())
+  }
+}
 
-// export default connect(null, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);

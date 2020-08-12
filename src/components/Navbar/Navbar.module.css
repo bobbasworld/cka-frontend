@@ -1,6 +1,6 @@
 .login {
     color: black;
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none; 
     margin-top: 5%;
     margin-right: 20px;
@@ -36,7 +36,23 @@
     margin-right: 20px;
 }
 
-.active, .navItem:hover{
+.active {
+    color: #3e82f8;
+    text-decoration: none;
+}
+
+.navItem:focus{
+    color: #3e82f8;
+    text-decoration: none;
+}
+
+
+.navItem:hover{
+    color: #3e82f8;
+    text-decoration: none;
+}
+
+.navItem:active{
     color: #3e82f8;
     text-decoration: none;
 }

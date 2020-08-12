@@ -21,13 +21,17 @@ const app = (
   </Provider>
 )
 
-
 ReactDOM.render(
-  <React.StrictMode>
-    {app}
-  </React.StrictMode>,
+  app,
   document.getElementById('root')
 );
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     {app}
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
 
 
 
