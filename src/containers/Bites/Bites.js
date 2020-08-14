@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react'
-import Navbar from '../../components/Navbar/Navbar';
 import BitesCard from '../BitesCard/BitesCard';
 import Dots from '../../img/dots.png';
 
@@ -9,12 +8,20 @@ import axios from 'axios'
 class Bites extends Component {
     state = {
         FA: null,
-        TA: null
+        TA: null,
     }
+
+    // axios method of cancelling API calls
+    signal = axios.CancelToken.source()
+
+    // browser API to cancel API calls...used with fetch API
+    abortController = new AbortController()
 
     componentDidMount() {
         console.log("BITES CDM")
-        axios.get('http://127.0.0.1:8000/api/bites/')
+        axios.get('http://127.0.0.1:8000/api/bites/', {
+            cancelToken: this.signal.token
+        })
             .then(res => {
                 let data = res.data
                 let fa = data.filter(item => {
@@ -28,14 +35,26 @@ class Bites extends Component {
                     TA: ta
                 })
             })
-            .catch(err => console.error(err))
+            .catch(err => {
+                if (axios.isCancel(err)) {
+                    console.log("Request canceled", err.message);
+                    throw new Error("Cancelled");
+                }
+                // console.error(err)
+            })
 
     }
+
+    // cancel the API calls once component is unmounted
+    componentWillUnmount() {
+        this.signal.cancel('API is being cancelled in Bites')
+        this.abortController.abort()
+    }
+
 
     render() {
         return (
             <Fragment>
-                <Navbar />
                 <div className="container">
                     <div className={styles.bitesHeader}>
                         <span className={styles.dotsImage1}><img src={Dots} alt="dots" width="30" height="30" /></span>

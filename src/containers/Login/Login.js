@@ -40,19 +40,20 @@ class Login extends Component {
                 <p className='text-danger'>{this.props.error}</p>
             )
         }
-        // if (this.props.isAuthenticated) {
-        //     return <Redirect to="/dashboard" />
-        // }
+
+        if (this.props.isAuthenticated) {
+            return <Redirect to="/dashboard" />
+        }
 
         return (
             <Fragment>
-                <nav className="bg-white navbar navbar-expand-lg navbar-light bg-light" >
+                {/* <nav className="bg-white navbar navbar-expand-lg navbar-light bg-light" >
                     <div className="container">
                         <Link to="/">
                             <img src={Logo} alt="Crypto Knowledge Alliance" width="60px" height="60px" />
                         </Link>
                     </div>
-                </nav>
+                </nav> */}
                 <div className={`container ${styles.signupForm}`}>
                     {errorMessage}
                     <h2 className={styles.formTitle}>Let's get you right into the action!</h2>

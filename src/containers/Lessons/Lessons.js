@@ -1,5 +1,4 @@
 import React, { Fragment, Component } from 'react';
-import Navbar from '../../components/Navbar/Navbar';
 import LessonCard from '../LessonCard/LessonCard';
 
 import styles from './Lessons.module.css';
@@ -67,7 +66,6 @@ class Lessons extends Component {
         console.log('Lessons User: ', this.props.user)
         return (
             <Fragment>
-                <Navbar />
                 <div className="container">
                     <div className={styles.lessonsHeader}>
                         <span className={styles.dotsImage1}><img src={Dots} alt="dots" width="30" height="30" /></span>

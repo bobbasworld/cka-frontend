@@ -50,13 +50,13 @@ class Signup extends Component {
         return (
             <Fragment>
                 {/* Navbar */}
-                <nav className="bg-white navbar navbar-expand-lg navbar-light bg-light" >
+                {/* <nav className="bg-white navbar navbar-expand-lg navbar-light bg-light" >
                     <div className="container">
                         <Link to="/">
                             <img src={Logo} alt="Crypto Knowledge Alliance" width="60px" height="60px" />
                         </Link>
                     </div>
-                </nav>
+                </nav> */}
 
                 <div className={`container ${styles.signupForm}`}>
                     {

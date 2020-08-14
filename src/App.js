@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -12,6 +12,10 @@ import SelectLevel from './containers/SelectLevel/SelectLevel';
 import Lessons from './containers/Lessons/Lessons';
 import LessonDetail from './containers/LessonDetail/LessonDetail';
 import Bites from './containers/Bites/Bites';
+import BiteDetail from './containers/BiteDetail/BiteDetail';
+import Navbar from './components/Navbar/Navbar';
+import Newsfeed from './containers/Newsfeed/Newsfeed';
+import Markets from './containers/Markets/Markets';
 
 import * as actions from './store/actions/auth';
 import axios from 'axios'
@@ -31,21 +35,27 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <div className="App" >
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/signup" component={Signup} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/dashboard" component={Dashboard} />
-            <Route exact path="/selectlevel" component={SelectLevel} />
-            <Route exact path="/lessons" component={Lessons} />
-            <Route exact path="/bites" component={Bites} />
-            <Route exact path="/lessons/:title" component={LessonDetail} />
-            {/* <Home /> */}
-          </Switch>
-        </div>
-      </Router>
+      <Fragment>
+        <Router>
+          <Navbar />
+          <div className="App" >
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/signup" component={Signup} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/selectlevel" component={SelectLevel} />
+              <Route exact path="/lessons" component={Lessons} />
+              <Route exact path="/lessons/:title" component={LessonDetail} />
+              <Route exact path="/bites" component={Bites} />
+              <Route exact path="/bites/:title" component={BiteDetail} />
+              <Route exact path="/news" component={Newsfeed} />
+              <Route exact path="/markets" component={Markets} />
+              {/* <Home /> */}
+            </Switch>
+          </div>
+        </Router>
+      </Fragment>
     );
   }
 }

@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import Navbar from '../../components/Navbar/Navbar';
 import styles from './LessonDetail.module.css';
 
 
@@ -27,8 +26,8 @@ class LessonDetail extends Component {
 
     render() {
         const { lesson } = this.state
-        let title = null
-        let content = null
+        let title, content = null
+
 
         if (lesson) {
             title = lesson[0]['title']
@@ -49,7 +48,6 @@ class LessonDetail extends Component {
 
         return (
             <Fragment>
-                <Navbar />
                 <div className="container">
                     {lessonDetail}
                 </div>

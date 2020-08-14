@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import Navbar from '../../components/Navbar/Navbar';
 import DashboardNewsfeed from '../../components/DashboardNewsfeed/DashboardNewsfeed';
 import DashboardLessons from '../../components/DashboardLessons/DashboardLessons';
 import DashboardPrices from '../../components/DashboardPrices/DashboardPrices';
@@ -31,13 +30,14 @@ class Dashboard extends Component {
         const token = localStorage.getItem('token')
         this.props.onLoadUser(token)
 
-        console.log("USER in DASHBOARD CDM: ", this.props.user)
-
+        // console.log("USER in DASHBOARD CDM: ", this.props.user)
         const CP_API_KEY = process.env.REACT_APP_CRYPTOPANIC_API_KEY;
         const herokucorsProxy = 'https://cors-anywhere.herokuapp.com/'
         const crypto_panic_url = herokucorsProxy + `https://cryptopanic.com/api/v1/posts/?auth_token=${CP_API_KEY}&public=true`
         const binance_24h_prices = "https://api.binance.com/api/v3/ticker/24hr"
         const icons_url = "https://rest.coinapi.io/v1/assets/icons/{iconSize}"
+        // const lessons_url = this.props.user ? `http://127.0.0.1:8000/api/lessons/?search=${this.props.user.level}` : null
+
         // https://cryptoicons.org/api/icon/btc/200       
         // const cryptoicons_url = "https://cryptoicons.org/api/:style/:currency/:size"
 
@@ -52,7 +52,9 @@ class Dashboard extends Component {
             axios.get(crypto_panic_url, cryptopanicConfig, {
                 signal: this.signal.token
             }),
-            // axios.get(lessons_url),
+            // axios.get(lessons_url, {
+            //     signal: this.signal.token
+            // }),
             axios.get(binance_24h_prices, {
                 signal: this.signal.token
             }),
@@ -66,7 +68,6 @@ class Dashboard extends Component {
                     // icons: iconsResults.data,
                     // user: userResult.data,
                     news: newsResults.data['results'],
-                    // lessons: lessonsResults.data,
                     prices: pricesResults.data,
 
                 })
@@ -87,7 +88,7 @@ class Dashboard extends Component {
             // this.setState({
             //     user: this.props.user
             // })
-            console.log("USER IN DASHBOARD CDU: ", this.props.user)
+            // console.log("USER IN DASHBOARD CDU: ", this.props.user)
             const lessons_url = this.props.user ? `http://127.0.0.1:8000/api/lessons/?search=${this.props.user.level}` : null
 
             axios.get(lessons_url, {
@@ -107,7 +108,7 @@ class Dashboard extends Component {
 
     static getDerivedStateFromProps(nextProps, prevState) {
         if (nextProps.user !== prevState.user) {
-            console.log("USER IN gDSFP: ", nextProps.user)
+            // console.log("USER IN gDSFP: ", nextProps.user)
             return { user: nextProps.user }
         }
         else return null
@@ -120,8 +121,6 @@ class Dashboard extends Component {
     }
 
 
-
-
     render() {
 
         const token = localStorage.getItem('token');
@@ -129,11 +128,9 @@ class Dashboard extends Component {
 
         if (this.props.user) {
             let { user } = this.props
-            console.log("Username in dashboard render: ", this.props.user.username)
+            // console.log("Username in dashboard render: ", this.props.user.username)
             username = user.username.charAt(0).toUpperCase() + user.username.slice(1)
         }
-
-
 
         if (!token) {
             return <Redirect to="/login" />
@@ -141,7 +138,6 @@ class Dashboard extends Component {
 
         return (
             <Fragment>
-                <Navbar />
                 <div className="container">
                     <div className="row">
                         <div className="col-6">
@@ -159,8 +155,6 @@ class Dashboard extends Component {
                             <DashboardPrices icons={this.state.icons} prices={this.state.prices} />
                         </div>
                     </div>
-
-
                 </div>
             </Fragment >
         );

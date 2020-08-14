@@ -1,8 +1,6 @@
 import React, { Fragment } from "react";
 import { Link, Redirect } from 'react-router-dom';
 
-import Navbar from '../Navbar/Navbar';
-
 import styles from './Home.module.css';
 import Drawing from '../../img/home_drawing.png';
 
@@ -15,7 +13,6 @@ const Home = () => {
     }
     return (
         <Fragment>
-            <Navbar />
             <div className={`container ${styles.showcase}`}>
                 <div className="row">
                     <div className={`col ${styles.showcaseLeft}`}>

@@ -1,0 +1,72 @@
+.newsfeedItemContainer {
+    width: 60%;
+    font-family: Montserrat, 'sans-seriff';
+    margin-top: 3%;
+    margin-left: 18%;
+    text-align: justify;
+}
+
+.newsfeedItemContainer:hover {
+    cursor: pointer;
+}
+
+.newsfeedItemTitleContainer {
+    width: 100%;
+    text-align: justify;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.newsfeedItemTitleContainer:hover {
+    color: #4184f8;
+    cursor: pointer;
+}
+
+.newsfeedItemDrawing {
+    display: inline-block;
+    width: 60px;
+    margin-right: 3%;
+}
+
+
+.newsfeedItemTitle {
+    font-weight: 600;
+    font-size: 13px;
+    padding-bottom: 5px;
+    line-height: 0;
+}
+
+.newsfeedItemTitleText {
+    text-align: center;
+}
+
+.newsfeedItemUrl {
+    font-size: 12px;
+    margin-left: 10%;
+    font-weight: 500;
+    color: #777777;
+}
+
+.newsfeedItemDate {
+    float: right;
+    margin-right: 15%;
+    font-size: 12px;
+    font-weight: 500;
+    color: #777777;
+}
+
+.newsfeedSeeMore {
+    color: #4184f8;
+}
+
+.newsfeedSeeMore:hover {
+    cursor: pointer;
+    color: #4184f8;
+    width: 50%;
+}
+
+.newsfeedItemTitle a {
+    text-decoration: none;
+    color: inherit;
+}

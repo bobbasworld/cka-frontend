@@ -13,6 +13,9 @@ import axios from 'axios';
 
 class Navbar extends Component {
 
+    componentDidMount() {
+        console.log("Navbar - CDM")
+    }
 
     handleLogout = (e) => {
         this.props.onLogout()
@@ -27,18 +30,9 @@ class Navbar extends Component {
         //     })
     }
 
-    handleNavClick = (e) => {
-        // const elem = document.querySelectorAll(".navItem");
-        // console.log(elem);
-        // elem.addEventListener('click', () => {
-        //     elem.classList.add('active');
-        // })
-        // e.target.classList.add('active')
-        // console.log(e.target.className)
-    }
-
 
     render() {
+        console.log("Navbar - render")
         return (
             <nav className="bg-white navbar navbar-expand-lg navbar-light bg-light" >
                 <div className="container">
@@ -57,12 +51,12 @@ class Navbar extends Component {
                             this.props.isAuthenticated ?
                                 (
                                     <div className="navbar-nav">
-                                        <NavLink onClick={this.handleNavClick} className={`${styles.navItem}`} to="/dashboard">Dashboard</NavLink>
-                                        <NavLink onClick={this.handleNavClick} className={styles.navItem} to="/lessons">Lessons</NavLink>
-                                        <NavLink onClick={this.handleNavClick} className={styles.navItem} to="/bites">Bites</NavLink>
-                                        <NavLink onClick={this.handleNavClick} className={styles.navItem} to="/news">News</NavLink>
-                                        <NavLink onClick={this.handleNavClick} className={styles.navItem} to="/markets">Markets</NavLink>
-                                        <NavLink onClick={this.handleNavClick} onClick={this.handleLogout} className={styles.login} to="/login">Logout</NavLink>
+                                        <NavLink activeClassName="active" className={`${styles.navItem}`} to="/dashboard">Dashboard</NavLink>
+                                        <NavLink activeClassName="active" className={styles.navItem} to="/lessons">Lessons</NavLink>
+                                        <NavLink activeClassName="active" className={styles.navItem} to="/bites">Bites</NavLink>
+                                        <NavLink activeClassName="active" className={styles.navItem} to="/news">News</NavLink>
+                                        <NavLink activeClassName="active" className={styles.navItem} to="/markets">Markets</NavLink>
+                                        <Link onClick={this.handleNavClick} onClick={this.handleLogout} className={styles.login} to="/login">Logout</Link>
                                     </div>
                                 )
                                 :

@@ -68,7 +68,7 @@ class DashboardPrices extends Component {
 
         // slice to get the top 20 items
         let resultList = pricesList.slice(0, 20)
-        console.log("Sorted: ", resultList)
+        // console.log("Sorted: ", resultList)
 
         const priceItem = resultList.map((item, index) => {
             let pair_symbol = item['symbol']
