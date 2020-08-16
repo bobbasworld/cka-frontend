@@ -7,17 +7,28 @@ import { Link, NavLink } from 'react-router-dom';
 
 import * as actions from '../../store/actions/auth';
 import axios from 'axios';
+import Avatar from 'react-avatar';
 
 
 
 
 class Navbar extends Component {
 
+    state = {
+        showAvatarOptions: false
+    }
+
     componentDidMount() {
+        this.setState({
+            showAvatarOptions: false
+        })
         console.log("Navbar - CDM")
     }
 
     handleLogout = (e) => {
+        this.setState({
+            showAvatarOptions: false
+        })
         this.props.onLogout()
         // axios.post('http://127.0.0.1:8000/auth/logout/')
         //     .then(res => {
@@ -30,9 +41,25 @@ class Navbar extends Component {
         //     })
     }
 
+    displayAvatarOptions = (e) => {
+        this.setState({ showAvatarOptions: !this.state.showAvatarOptions })
+        // let elem = document.getElementsByClassName("avatarOptions")[0]
+        // console.log("elem: ", elem)
+        // elem.style.display = 'block'
+    }
+
+    componentWillUnmount() {
+        this.displayAvatarOptions()
+    }
+
 
     render() {
         console.log("Navbar - render")
+        let username = null
+        if (this.props.user) {
+            username = this.props.user.username
+        }
+
         return (
             <nav className="bg-white navbar navbar-expand-lg navbar-light bg-light" >
                 <div className="container">
@@ -56,7 +83,26 @@ class Navbar extends Component {
                                         <NavLink activeClassName="active" className={styles.navItem} to="/bites">Bites</NavLink>
                                         <NavLink activeClassName="active" className={styles.navItem} to="/news">News</NavLink>
                                         <NavLink activeClassName="active" className={styles.navItem} to="/markets">Markets</NavLink>
-                                        <Link onClick={this.handleNavClick} onClick={this.handleLogout} className={styles.login} to="/login">Logout</Link>
+
+                                        <div className="dropdown">
+
+                                        </div>
+                                        <Avatar
+                                            size="40"
+                                            round={true}
+                                            name={username}
+                                            className={`${styles.navbarAvatar}`}
+                                            onClick={this.displayAvatarOptions}
+                                        />
+                                        {
+                                            this.state.showAvatarOptions ?
+                                                <div className={`avatarOptions ${styles.navbarAvatarOptions}`}>
+                                                    <Link onClick={this.handleLogout} className={`${styles.navbarAvatarItem}`} to="/login">Logout</Link>
+                                                    {/* <a className={`${styles.navbarAvatarItem}`} href="#">Action</a>
+                                                    <a className={`${styles.navbarAvatarItem}`} href="#">Another action</a> */}
+                                                </div>
+                                                : null
+                                        }
                                     </div>
                                 )
                                 :
@@ -79,7 +125,8 @@ class Navbar extends Component {
 
 const mapStateToProps = state => {
     return {
-        isAuthenticated: state.isAuthenticated
+        isAuthenticated: state.isAuthenticated,
+        user: state.user
     }
 }
 

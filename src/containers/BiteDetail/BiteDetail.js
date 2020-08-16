@@ -4,6 +4,8 @@ import styles from './BiteDetail.module.css';
 
 import axios from 'axios';
 import moment from 'moment';
+import ReactMarkdown from 'react-markdown/with-html';
+
 
 class BiteDetail extends Component {
 
@@ -14,6 +16,7 @@ class BiteDetail extends Component {
     async componentDidMount() {
         let title = this.props.match.params.title
         let url = `http://127.0.0.1:8000/api/bites/?search=${title}`
+
 
         axios.get(url)
             .then(res => {
@@ -29,6 +32,7 @@ class BiteDetail extends Component {
         let { data } = this.state
         let title, content, date, convertedDate = null
 
+
         // check if data is loaded in state...this avoids undefined or null error
         if (data) {
             title = data[0].title
@@ -42,7 +46,9 @@ class BiteDetail extends Component {
             <div className={styles.bitedetailContainer}>
                 <h3 className={styles.bitedetailTitle}>{title}</h3>
                 <span className={styles.bitedetailDate}>{convertedDate}</span>
-                <p className={styles.bitedetailContent}>{content}</p>
+                <p className={styles.bitedetailContent} >
+                </p>
+                <ReactMarkdown source={content} escapeHtml={false} />
             </div>
         ) : (
                 <div className="text-center">Loading...</div>

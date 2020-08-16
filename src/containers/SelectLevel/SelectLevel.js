@@ -109,13 +109,13 @@ class SelectLevel extends Component {
             this.props.loading ? <h2>Loading...</h2>
                 :
                 <Fragment>
-                    <nav className="bg-white navbar navbar-expand-lg navbar-light bg-light" >
+                    {/* <nav className="bg-white navbar navbar-expand-lg navbar-light bg-light" >
                         <div className="container">
                             <Link to="/">
                                 <img src={Logo} alt="Crypto Knowledge Alliance" width="60px" height="60px" />
                             </Link>
                         </div>
-                    </nav>
+                    </nav> */}
                     <div className={`container ${styles.selectForm}`}>
                         <h2 className={styles.formTitle}>Select Level</h2>
                         <form onSubmit={this.handleSubmit} className={styles.form}>
