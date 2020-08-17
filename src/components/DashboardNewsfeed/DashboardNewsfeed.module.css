@@ -57,3 +57,9 @@
     text-decoration: none;
     color: #4184f8;
 }
+
+.dashnewsfeedSeeMore {
+    color: #2979FF;
+    cursor: pointer;
+    padding-bottom: 40px;
+}

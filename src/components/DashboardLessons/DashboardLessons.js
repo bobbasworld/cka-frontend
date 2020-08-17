@@ -34,6 +34,7 @@ const DashboardLessons = ({ lessons }) => {
             <div className={styles.dashlessonsCard}>
                 <h3 className={styles.dashlessonsHeader}>Lessons</h3>
                 {lessonItem}
+                <Link to='/lessons'><span className={styles.dashlessonsSeeMore}>See More</span></Link>
             </div>
         </Fragment>
     )

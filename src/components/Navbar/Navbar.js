@@ -22,7 +22,7 @@ class Navbar extends Component {
         this.setState({
             showAvatarOptions: false
         })
-        console.log("Navbar - CDM")
+        // console.log("Navbar - CDM")
     }
 
     handleLogout = (e) => {
@@ -54,7 +54,7 @@ class Navbar extends Component {
 
 
     render() {
-        console.log("Navbar - render")
+        // console.log("Navbar - render")
         let username = null
         if (this.props.user) {
             username = this.props.user.username

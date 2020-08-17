@@ -39,7 +39,7 @@ class BitesCard extends Component {
         let taBites = null
 
         if (this.props) {
-            console.log("props in bitescard:", this.props)
+            // console.log("props in bitescard:", this.props)
             faBites = this.props.fa
             taBites = this.props.ta
         }

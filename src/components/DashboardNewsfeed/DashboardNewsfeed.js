@@ -1,7 +1,9 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './DashboardNewsfeed.module.css';
 import uuid from 'react-uuid';
 import moment from 'moment';
+
 
 
 
@@ -24,6 +26,7 @@ const DashboardNewsfeed = (props) => {
 
         let url = item['url']
 
+
         return (
             <div key={uuid()} className={styles.dashnewsfeedItem}>
                 <p className={styles.dashnewsfeedItemText}>
@@ -43,6 +46,7 @@ const DashboardNewsfeed = (props) => {
             <div className={styles.dashnewsfeedCard}>
                 <h3 className={styles.dashnewsfeedHeader}>News Feed</h3>
                 {newsItem}
+                <Link to='/news'><span className={styles.dashnewsfeedSeeMore}>See More</span></Link>
             </div>
         </Fragment >
     );
