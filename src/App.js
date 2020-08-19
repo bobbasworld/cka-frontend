@@ -15,7 +15,8 @@ import Bites from './containers/Bites/Bites';
 import BiteDetail from './containers/BiteDetail/BiteDetail';
 import Navbar from './components/Navbar/Navbar';
 import Newsfeed from './containers/Newsfeed/Newsfeed';
-import Markets from './containers/Markets/Markets';
+import Projects from './containers/Projects/Projects';
+import ProjectDetail from './containers/ProjectDetail/ProjectDetail';
 
 import * as actions from './store/actions/auth';
 import axios from 'axios'
@@ -50,7 +51,8 @@ class App extends Component {
               <Route exact path="/bites" component={Bites} />
               <Route exact path="/bites/:title" component={BiteDetail} />
               <Route exact path="/news" component={Newsfeed} />
-              <Route exact path="/markets" component={Markets} />
+              <Route exact path="/projects" component={Projects} />
+              <Route exact path="/projects/:title" component={ProjectDetail} />
               {/* <Home /> */}
             </Switch>
           </div>

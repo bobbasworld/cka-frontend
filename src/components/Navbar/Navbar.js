@@ -82,7 +82,7 @@ class Navbar extends Component {
                                         <NavLink activeClassName="active" className={styles.navItem} to="/lessons">Lessons</NavLink>
                                         <NavLink activeClassName="active" className={styles.navItem} to="/bites">Bites</NavLink>
                                         <NavLink activeClassName="active" className={styles.navItem} to="/news">News</NavLink>
-                                        <NavLink activeClassName="active" className={styles.navItem} to="/markets">Markets</NavLink>
+                                        <NavLink activeClassName="active" className={styles.navItem} to="/projects">Projects</NavLink>
 
                                         <div className="dropdown">
 
