@@ -1,3 +1,9 @@
+.projectcardHeading {
+    font-size: 24px;
+    color: #2979FF;
+    font-family: Montserrat, 'sans-serrif';
+}
+
 .projectcardContainer {
     height: 200px;
     border-radius: 12px;

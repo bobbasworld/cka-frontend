@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 
 import styles from './ProjectCard.module.css';
 
+import fireIcon from '../../img/fire_icon.png';
 import moment from 'moment'
 
 
@@ -68,7 +69,11 @@ class BitesCard extends Component {
 
         return (
             <Fragment>
-                <h4 className={styles.projectcardTitle}>Hot Projects</h4>
+                <span>
+                    <img src={fireIcon} alt="fire" width="30px" height="30px" />
+                    <h4 className={styles.projectcardHeading}>Hot Projects</h4>
+                </span>
+
                 <div className="container">
                     <div className="row">
                         {projectItem}

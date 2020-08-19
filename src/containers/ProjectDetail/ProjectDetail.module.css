@@ -12,6 +12,12 @@
     margin-bottom: 3%;
 }
 
+.projectdetailAuthorName {
+    font-size: 14px;
+    font-weight: 400;
+    color: inherit;
+}
+
 .projectdetailDate {
     font-size: 14px;
     font-weight: 500;
