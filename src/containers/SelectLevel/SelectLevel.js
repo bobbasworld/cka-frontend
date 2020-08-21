@@ -120,19 +120,18 @@ class SelectLevel extends Component {
                         <h2 className={styles.formTitle}>Select Level</h2>
                         <form onSubmit={this.handleSubmit} className={styles.form}>
                             <div className="form-group">
-                                <input onClick={this.handleClick} name="beginner" value="Beginner (< 6 months)" type="button" className={`${styles.formInput}`} id="beginner" />
+                                <input onClick={this.handleClick} name="beginner" value="Beginner (< 6 Mo)" type="button" className={`${styles.formInput}`} id="beginner" />
                             </div>
                             <div className="form-group" >
-                                <input onClick={this.handleClick} name="intermediate" value="Intermediate (6 months - 1 year)" type="button" className={`${styles.formInput}`} id="intermediate" />
+                                <input onClick={this.handleClick} name="intermediate" value="Intermediate (6 Mo - 1 Yr)" type="button" className={`${styles.formInput}`} id="intermediate" />
                             </div>
                             <div className="form-group">
-                                <input onClick={this.handleClick} name="advanced" value="Advanced (> 1 year)" type="button" className={`${styles.formInput}`} id="advanced" />
+                                <input onClick={this.handleClick} name="advanced" value="Advanced (> 1 Yr)" type="button" className={`${styles.formInput}`} id="advanced" />
                             </div>
-                            <br />
                             <p className={styles.infoText}>This helps us curate content for you so that you can get up to speed as soon as possible!</p>
                             <button className={styles.nextBtn} type="submit">Next <span><img className={styles.rightArrow} src={Arrow} alt="right" width="12px" height="10px" /></span></button>
                         </form>
-                        <img className={styles.drawing} src={Drawing} alt="drawing" width="350px" height="420px" />
+                        <img className={styles.selectlevelDrawing} src={Drawing} alt="drawing" />
                     </div>
                 </Fragment >
 

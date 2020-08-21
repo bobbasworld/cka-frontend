@@ -88,3 +88,253 @@
     color: #949494;
     width: 27%;
 }
+
+
+@media only screen and (max-width: 1200px) {
+    .dashpricesHeader {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 4%;
+    }
+
+    .dashpricesItem {
+        width: 65%;
+        margin-left: 15%;
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+
+    .dashpricesItemText {
+        margin-right: -20%;
+    }
+    
+    .dashpricesId {
+        color: #858585;
+        font-size: 10px;
+        width: 2%;
+        padding-right: 8px;
+    }
+
+    .dashpricesSymbol {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 12px;
+        font-weight: 500;
+        display: inline-block;
+        width: 20%;
+        margin: 0 30px;
+    }
+
+    .dashpricesPercent1 {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 12px;
+        font-weight: 600;
+        color: #3DD066;
+        display: inline-block;
+        /* width: 60px; */
+        width: 10%;
+        margin-right: 70px;
+    } 
+
+    .dashpricesPercent2 {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 12px;
+        font-weight: 600;
+        color: #FF4C40;
+        display: inline-block;
+        /* width: 60px; */
+        width: 10%;
+        margin-right: 70px;
+    } 
+
+    .dashpricesPrice {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 12px;
+        font-weight: 500;
+        display: inline-block;
+        width: 10%;
+    }
+
+    .dashpricesTitles {
+        width: 85%;
+        text-align: justify;
+        margin-bottom: 10px;
+        margin-left: 22%;
+    }
+
+    .dashpricesTitle {
+        font-family: Montserrat, 'sans-serrif';
+        font-size: 12px;
+        font-weight: 600;
+        color: #949494;
+        width: 30%;
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 991px) {
+    .dashpricesHeader {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 4%;
+    }
+
+    .dashpricesItem {
+        width: 65%;
+        margin-left: 12%;
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+
+    .dashpricesItemText {
+        margin-right: -10%;
+    }
+    
+    .dashpricesId {
+        color: #858585;
+        font-size: 10px;
+        padding-right: 10px;
+    }
+
+    .dashpricesSymbol {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 12px;
+        font-weight: 500;
+        display: inline-block;
+        width: 10%;
+        margin-top: 0;
+        margin-left: 20px;
+        margin-right: 40px;
+    }
+
+    .dashpricesPercent1 {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 12px;
+        font-weight: 600;
+        color: #3DD066;
+        display: inline-block;
+        /* width: 60px; */
+        width: 6%;
+        margin-right: 60px;
+    } 
+
+    .dashpricesPercent2 {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 12px;
+        font-weight: 600;
+        color: #FF4C40;
+        display: inline-block;
+        /* width: 60px; */
+        width: 6%;
+        margin-right: 60px;
+    } 
+
+    .dashpricesPrice {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 12px;
+        font-weight: 500;
+        display: inline-block;
+        width: 10%;
+    }
+
+    .dashpricesTitles {
+        width: 70%;
+        text-align: justify;
+        margin-bottom: 10px;
+        margin-left: 20%;
+    }
+
+    .dashpricesTitle {
+        font-family: Montserrat, 'sans-serrif';
+        font-size: 11px;
+        font-weight: 600;
+        color: #949494;
+    }
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .dashpricesHeader {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 4%;
+    }
+
+    .dashpricesItem {
+        width: 65%;
+        margin-left: 7%;
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+
+    .dashpricesItemText {
+        margin-right: -10%;
+    }
+    
+    .dashpricesId {
+        color: #858585;
+        font-size: 9px;
+        padding-right: 10px;
+    }
+
+    .dashpricesSymbol {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 10px;
+        font-weight: 500;
+        display: inline-block;
+        width: 10%;
+        margin-top: 0;
+        margin-left: 10px;
+        margin-right: 40px;
+    }
+
+    .dashpricesPercent1 {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 10px;
+        font-weight: 600;
+        color: #3DD066;
+        display: inline-block;
+        /* width: 60px; */
+        width: 6%;
+        margin-right: 50px;
+    } 
+
+    .dashpricesPercent2 {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 10px;
+        font-weight: 600;
+        color: #FF4C40;
+        display: inline-block;
+        /* width: 60px; */
+        width: 6%;
+        margin-right: 50px;
+    } 
+
+    .dashpricesPrice {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 10px;
+        font-weight: 500;
+        display: inline-block;
+        width: 10%;
+    }
+
+    .dashpricesTitles {
+        width: 90%;
+        text-align: justify;
+        margin-bottom: 10px;
+        margin-left: 12%;
+    }
+
+    .dashpricesTitle {
+        font-family: Montserrat, 'sans-serrif';
+        font-size: 10px;
+        font-weight: 600;
+        color: #949494;
+    }
+}

@@ -2,7 +2,7 @@
     /* position: relative; */
     width: 35%;
     margin-right: 55%;
-    margin-top: 4%;
+    margin-top: 6%;
     position: relative;
 }
 
@@ -81,8 +81,340 @@ img.rightArrow {
     margin-left: 6px;
 }
 
-.drawing {
+.selectlevelDrawing {
     position: absolute;
+    width: 350px; 
+    height: 420px;
     top: -3%;
     left: 135%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .selectForm {
+        /* position: relative; */
+        width: 35%;
+        margin-right: 55%;
+        margin-top: 4%;
+        position: relative;
+    }
+    
+    .formTitle {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+    }
+    
+    .form {
+        margin-top: 20px;
+    }
+    
+    input.formInput {
+        outline: #69F0AE;
+        border: 1px solid #d4d4d4;
+        width: 75%;
+        font-size: 14px;
+        color: #969696;
+        background-color: #FCFBFB ;
+    }
+    
+    input.formInput:hover {
+        border: 1px solid #69F0AE;
+        background-color: #ecfff6 ;
+        color: #29D99E;
+        font-weight: 500;
+    }
+    
+    input.formInput:focus {
+        border: 1px solid #69F0AE;
+        background-color: #ecfff6 ;
+        color: #29D99E;
+        font-weight: 500;
+    }
+    
+    
+    .formInput {
+        text-align: center;
+        height: 45px;
+        border-radius: 20px;
+    }
+    
+    
+    .infoText {
+        color: #000; 
+        width: 75%;
+        margin-left: 12%;
+        text-align: start;
+    }
+    
+    .nextBtn {
+        width: 40%;
+        margin-right: 4%;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        color: #5498FE;
+        background-color: #eff5fc;
+    }
+    
+    .nextBtn:hover {
+        width: 40%;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        color: #5498FE;
+        background-color: #eff5fc;
+        border: 1px solid #afcdff;
+    }
+    
+    .nextBtn:focus{
+        border: 1px solid #afcdff;
+        outline: none;
+    }
+    
+    img.rightArrow {
+        margin-bottom: 3px;
+        margin-left: 6px;
+    }
+    
+    .selectlevelDrawing {
+        position: absolute;
+        width: 320px; 
+        height: 400px;
+        top: -3%;
+        left: 135%;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .selectForm {
+        /* position: relative; */
+        width: 35%;
+        margin-right: 55%;
+        margin-top: 4%;
+        position: relative;
+    }
+    
+    .formTitle {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    
+    .form {
+        margin-top: 20px;
+    }
+    
+    input.formInput {
+        outline: #69F0AE;
+        border: 1px solid #d4d4d4;
+        width: 80%;
+        font-size: 14px;
+        color: #969696;
+        background-color: #FCFBFB ;
+
+        text-align: center;
+        height: 45px;
+        border-radius: 20px;
+    }
+    
+    input.formInput:hover {
+        border: 1px solid #69F0AE;
+        background-color: #ecfff6 ;
+        color: #29D99E;
+        font-weight: 500;
+    }
+    
+    input.formInput:focus {
+        border: 1px solid #69F0AE;
+        background-color: #ecfff6 ;
+        color: #29D99E;
+        font-weight: 500;
+    }
+    
+    .infoText {
+        color: #000; 
+        font-size: 14px;
+        width: 75%;
+        margin-left: 12%;
+        text-align: start;
+    }
+    
+    .nextBtn {
+        width: 40%;
+        font-size: 14px;
+        margin-right: 4%;
+        padding: 8px;
+        border: none;
+        border-radius: 6px;
+        color: #5498FE;
+        background-color: #eff5fc;
+    }
+    
+    .nextBtn:hover {
+        width: 40%;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        color: #5498FE;
+        background-color: #eff5fc;
+        border: 1px solid #afcdff;
+    }
+    
+    .nextBtn:focus{
+        border: 1px solid #afcdff;
+        outline: none;
+    }
+    
+    img.rightArrow {
+        margin-bottom: 3px;
+        margin-left: 6px;
+    }
+    
+    .selectlevelDrawing {
+        position: absolute;
+        width: 300px; 
+        height: 360px;
+        top: -3%;
+        left: 135%;
+    }
+}
+
+@media only screen and (max-width: 926px) {
+    input.formInput {
+        outline: #69F0AE;
+        border: 1px solid #d4d4d4;
+        width: 100%;
+        font-size: 14px;
+        color: #969696;
+        background-color: #FCFBFB ;
+
+        text-align: center;
+        height: 45px;
+        border-radius: 20px;
+    }
+
+    .infoText {
+        color: #000; 
+        font-size: 13px;
+        width: 96%;
+        margin-left: 3%;
+        text-align: start;
+    }
+    
+}
+
+@media only screen and (max-width: 767px) {
+    input.formInput {
+        outline: #69F0AE;
+        border: 1px solid #d4d4d4;
+        width: 100%;
+        font-size: 14px;
+        color: #969696;
+        background-color: #FCFBFB ;
+
+        text-align: center;
+        height: 50px;
+        border-radius: 20px;
+    }
+
+    input[value="Beginner (< 6 months)"] {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    input[value="Intermediate (6 months - 1 year)"] {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    input[value="Advanced (> 1 year)"] {
+        width: 100%;
+        font-size: 13px;
+    }
+
+
+    .infoText {
+        color: #000; 
+        font-size: 13px;
+        width: 96%;
+        margin-left: 3%;
+        text-align: start;
+    }
+    
+}
+
+@media only screen and (max-width: 700px) {
+
+    .selectForm {
+        /* position: relative; */
+        width: 40%;
+        margin-right: 55%;
+        margin-top: 6%;
+        position: relative;
+    }
+    
+    .formTitle {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        margin-left: 6%;
+        font-weight: 600;
+    }
+
+    input.formInput {
+        outline: #69F0AE;
+        border: 1px solid #d4d4d4;
+        width: 140%;
+        font-size: 10px;
+        color: #969696;
+        background-color: #FCFBFB ;
+
+        margin-right: 200px;
+        text-align: center;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    input[value="Beginner (< 6 months)"] {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    input[value="Intermediate (6 months - 1 year)"] {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    input[value="Advanced (> 1 year)"] {
+        width: 100%;
+        font-size: 13px;
+    }
+
+
+    .infoText {
+        color: #000; 
+        font-size: 11px;
+        width: 160%;
+        margin-left: 3%;
+        text-align: start;
+    }
+
+    .nextBtn {
+        width: 100%;
+        margin-left: 24%;
+        font-size: 12px;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        color: #5498FE;
+        background-color: #eff5fc;
+    }
+
+    .selectlevelDrawing {
+        position: absolute;
+        width: 200px; 
+        height: 240px;
+        top: 10%;
+        left: 130%;
+    }
+
 }

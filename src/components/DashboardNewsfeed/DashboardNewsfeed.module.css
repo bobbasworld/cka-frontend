@@ -63,3 +63,243 @@
     cursor: pointer;
     padding-bottom: 40px;
 }
+
+.dashnewsfeedSeeMore:hover {
+    text-decoration: underline;
+    color: #2979FF;
+    cursor: pointer;
+    padding-bottom: 40px;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .dashnewsfeedCard {
+        width: 100%;
+        border-radius: 12px;
+        background-color: #fff;
+        margin-left: 3%;
+        margin-top: 4%;
+        box-shadow: 0.5px 2px 2px #b3aeae;
+        padding: 10px 0;
+    }
+
+    .dashnewsfeedHeader {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .dashnewsfeedItem {
+        /* position: relative; */
+        background-color: #f8f8f8;
+        width: 400px;
+        border-radius: 8px;
+        margin-left: 5%;
+        margin-bottom: 2%;
+        padding-bottom: 6px;
+    }
+
+    .dashnewsfeedItemText {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 12px;
+        font-weight: 500;
+        padding-top: 15px;
+        padding-right: 18px;
+        padding-left: 22px;
+        text-align: justify;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .dashnewsfeedDate {
+        color: #858585;
+        font-size: 10px;
+        margin-right: 260px;
+    }
+
+    .dashnewsfeedCode {
+        color: #858585;
+        font-size: 10px;
+    }
+
+    .dashnewsfeedItemText a {
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .dashnewsfeedItemText a:hover {
+        text-decoration: none;
+        color: #4184f8;
+    }
+    
+    .dashnewsfeedSeeMore {
+        color: #2979FF;
+        cursor: pointer;
+        font-size: 14px;
+        padding-bottom: 40px;
+    }
+
+    .dashnewsfeedSeeMore:hover {
+        text-decoration: underline;
+        color: #2979FF;
+        cursor: pointer;
+        padding-bottom: 40px;
+    }
+
+}
+
+
+@media only screen and (max-width: 991px) {
+    .dashnewsfeedCard {
+        width: 100%;
+        border-radius: 12px;
+        background-color: #fff;
+        margin-left: 1%;
+        margin-top: 4%;
+        box-shadow: 0.5px 2px 2px #b3aeae;
+        padding: 10px 0;
+    }
+
+    .dashnewsfeedHeader {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .dashnewsfeedItem {
+        /* position: relative; */
+        background-color: #f8f8f8;
+        width: 300px;
+        border-radius: 8px;
+        margin-left: 4.5%;
+        margin-bottom: 2%;
+        padding-bottom: 6spx;
+    }
+
+    .dashnewsfeedItemText {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 12px;
+        font-weight: 500;
+        padding-top: 15px;
+        padding-right: 18px;
+        padding-left: 18px;
+        text-align: justify;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .dashnewsfeedDate {
+        color: #858585;
+        font-size: 10px;
+        margin-right: 170px;
+    }
+
+    .dashnewsfeedCode {
+        color: #858585;
+        font-size: 10px;
+    }
+
+    .dashnewsfeedItemText a {
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .dashnewsfeedItemText a:hover {
+        text-decoration: none;
+        color: #4184f8;
+    }
+    
+    .dashnewsfeedSeeMore {
+        color: #2979FF;
+        cursor: pointer;
+        font-size: 13px;
+        padding-bottom: 40px;
+    }
+
+    .dashnewsfeedSeeMore:hover {
+        text-decoration: underline;
+        color: #2979FF;
+        cursor: pointer;
+        padding-bottom: 40px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .dashnewsfeedCard {
+        width: 100%;
+        border-radius: 12px;
+        background-color: #fff;
+        margin-left: 1%;
+        margin-top: 4%;
+        box-shadow: 0.5px 2px 2px #b3aeae;
+        padding: 10px 0;
+    }
+
+    .dashnewsfeedHeader {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .dashnewsfeedItem {
+        /* position: relative; */
+        background-color: #f8f8f8;
+        width: 200px;
+        border-radius: 8px;
+        margin-left: 8%;
+        margin-bottom: 2%;
+        padding-bottom: 6px;
+    }
+
+    .dashnewsfeedItemText {
+        font-family: Montserrat, 'san-serrif';
+        font-size: 10px;
+        font-weight: 500;
+        padding-top: 15px;
+        padding-right: 18px;
+        padding-left: 18px;
+        text-align: justify;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .dashnewsfeedDate {
+        color: #858585;
+        font-size: 9px;
+        margin-right: 78px;
+    }
+
+    .dashnewsfeedCode {
+        color: #858585;
+        font-size: 9px;
+    }
+
+    .dashnewsfeedItemText a {
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .dashnewsfeedItemText a:hover {
+        text-decoration: none;
+        color: #4184f8;
+    }
+    
+    .dashnewsfeedSeeMore {
+        color: #2979FF;
+        cursor: pointer;
+        font-size: 11px;
+        padding-bottom: 40px;
+    }
+
+    .dashnewsfeedSeeMore:hover {
+        text-decoration: underline;
+        color: #2979FF;
+        cursor: pointer;
+        padding-bottom: 40px;
+    }
+
+}

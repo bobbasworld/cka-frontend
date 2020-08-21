@@ -32,10 +32,13 @@ const DashboardNewsfeed = (props) => {
                 <p className={styles.dashnewsfeedItemText}>
                     <a href={url} target="_blank">{item['title']}</a>
                 </p>
-                <span className={styles.dashnewsfeedDate}>
-                    {m.fromNow()}
+                <span>
+                    <span className={styles.dashnewsfeedDate}>
+                        {m.fromNow()}
+                    </span>
+                    <span className={styles.dashnewsfeedCode}>{code ? code : 'News'}</span>
                 </span>
-                <span className={styles.dashnewsfeedCode}>{code ? code : 'News'}</span>
+
             </div>
 
         )

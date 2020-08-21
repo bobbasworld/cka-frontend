@@ -68,11 +68,11 @@ class Lessons extends Component {
             <Fragment>
                 <div className="container">
                     <div className={styles.lessonsHeader}>
-                        <span className={styles.dotsImage1}><img src={Dots} alt="dots" width="30" height="30" /></span>
+                        <span><img className={styles.dotsImage1} src={Dots} alt="dots" /></span>
                         <div className={styles.lessonsHeaderText}>
                             <h3 className={styles.lessonsTitle}>Cryptocurrency Lessons</h3>
                         </div>
-                        <span className={styles.dotsImage2}><img src={Dots} alt="dots" width="30" height="30" /></span>
+                        <span><img className={styles.dotsImage2} src={Dots} alt="dots" /></span>
                     </div>
                     <LessonCard lessons={this.state.lessons} />
                 </div>

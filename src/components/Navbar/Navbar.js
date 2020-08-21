@@ -77,7 +77,7 @@ class Navbar extends Component {
                         {
                             this.props.isAuthenticated ?
                                 (
-                                    <div className="navbar-nav">
+                                    <div className="navbar-nav text-center">
                                         <NavLink activeClassName="active" className={`${styles.navItem}`} to="/dashboard">Dashboard</NavLink>
                                         <NavLink activeClassName="active" className={styles.navItem} to="/lessons">Lessons</NavLink>
                                         <NavLink activeClassName="active" className={styles.navItem} to="/bites">Bites</NavLink>
@@ -94,6 +94,7 @@ class Navbar extends Component {
                                             className={`${styles.navbarAvatar}`}
                                             onClick={this.displayAvatarOptions}
                                         />
+                                        <Link onClick={this.handleLogout} className={`${styles.navbarLogout} ${styles.navbarAvatarItem}`} to="/login">Logout</Link>
                                         {
                                             this.state.showAvatarOptions ?
                                                 <div className={`avatarOptions ${styles.navbarAvatarOptions}`}>
@@ -107,7 +108,7 @@ class Navbar extends Component {
                                 )
                                 :
                                 (
-                                    <div className="navbar-nav">
+                                    <div className="navbar-nav text-center">
                                         <NavLink className={styles.login} to="/login">Login</NavLink>
                                         <NavLink className={styles.signup} to="/signup">Sign Up</NavLink>
                                     </div>

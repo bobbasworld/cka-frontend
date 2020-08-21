@@ -146,7 +146,7 @@ class Dashboard extends Component {
                                     <h3 className={styles.dashboardTitle}>Hello, {username}</h3>
                                     <p className={styles.dashboardText}>You're not so far away from <br /> progressing to the next Level!</p>
                                 </div>
-                                <img className={styles.dashboardDrawing} src={Drawing} alt="drawing" width="200" height="200" />
+                                <img className={styles.dashboardDrawing} src={Drawing} alt="drawing" />
                             </div>
                             <DashboardNewsfeed news={this.state.news} />
                             <DashboardLessons lessons={this.state.lessons} />

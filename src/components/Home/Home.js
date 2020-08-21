@@ -18,10 +18,10 @@ const Home = () => {
                     <div className={`col ${styles.showcaseLeft}`}>
                         <h1 className={styles.showcaseTitle}>Simple and Actionable Crypto Bites</h1>
                         <p className={styles.showcaseText}>No nonsense crypto tools and strategies created by experts to help you navigate the crypto space with ease.</p>
-                        <Link className={styles.signup} to="/signup">Get Started</Link>
+                        <Link className={`${styles.getStarted} ${styles.signup}`} to="/signup">Get Started</Link>
                     </div>
                     <div className={`col ${styles.showcaseRight}`}>
-                        <img src={Drawing} alt="Crypto" width="450px" height="350px" />
+                        <img className={styles.showcaseDrawing} src={Drawing} alt="Crypto" />
                     </div>
                 </div>
             </div >

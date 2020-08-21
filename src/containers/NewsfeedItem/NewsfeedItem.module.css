@@ -61,6 +61,7 @@
 }
 
 .newsfeedSeeMore:hover {
+    text-decoration: underline;
     cursor: pointer;
     color: #4184f8;
     width: 50%;
@@ -69,4 +70,70 @@
 .newsfeedItemTitle a {
     text-decoration: none;
     color: inherit;
+}
+
+@media only screen and (max-width: 1200px) {
+    .newsfeedItemContainer {
+        width: 60%;
+        font-family: Montserrat, 'sans-seriff';
+        margin-top: 3%;
+        margin-left: 21%;
+        text-align: justify;
+    }
+
+    .newsfeedSeeMore {
+        color: #4184f8;
+    }
+    
+    .newsfeedSeeMore:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        color: #4184f8;
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .newsfeedItemContainer {
+        width: 70%;
+        font-family: Montserrat, 'sans-seriff';
+        margin-top: 3%;
+        margin-left: 18%;
+        text-align: justify;
+    }
+
+    .newsfeedSeeMore {
+        font-size: 14px;
+        color: #4184f8;
+    }
+    
+    .newsfeedSeeMore:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        color: #4184f8;
+        width: 50%;
+    }
+    
+}
+
+@media only screen and (max-width: 767px) {
+    .newsfeedItemContainer {
+        width: 85%;
+        font-family: Montserrat, 'sans-seriff';
+        margin-top: 3%;
+        margin-left: 6%;
+        text-align: justify;
+    }
+
+    .newsfeedSeeMore {
+        color: #4184f8;
+        font-size: 13px;
+    }
+    
+    .newsfeedSeeMore:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        color: #4184f8;
+        width: 50%;
+    }
 }
