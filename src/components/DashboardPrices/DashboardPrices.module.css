@@ -259,6 +259,17 @@
 
 
 @media only screen and (max-width: 767px) {
+
+    .dashpricesCard {
+        width: 100%;
+        border-radius: 12px;
+        background-color: #fff;
+        margin-top: 4%;
+        margin-left: 1%;
+        box-shadow: 0.5px 2px 2px #b3aeae;
+        padding: 30px 0;
+    }
+
     .dashpricesHeader {
         font-family: Montserrat, 'san-serrif';
         font-size: 14px;
@@ -267,8 +278,8 @@
     }
 
     .dashpricesItem {
-        width: 65%;
-        margin-left: 7%;
+        width: 180%;
+        margin-left: 15%;
         text-align: justify;
         margin-bottom: 10px;
     }
@@ -328,7 +339,7 @@
         width: 90%;
         text-align: justify;
         margin-bottom: 10px;
-        margin-left: 12%;
+        margin-left: 21%;
     }
 
     .dashpricesTitle {

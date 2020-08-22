@@ -1,3 +1,7 @@
+.mobileShowcase {
+    display: none;
+}
+
 .showcase {
     margin-top: 10%;
     position: relative;
@@ -146,4 +150,44 @@
         width: 300px;
         height: 200px;
     }
+}
+
+@media only screen and (max-width: 700px) {
+    .mobileShowcase {
+        display: block;
+    }
+
+    .showcase {
+        display: none;
+    }
+
+    .showcaseTitle {
+        text-align: start;
+        margin-top: 10%;
+        margin-left: 15%;
+        margin-bottom: 0;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    .showcaseText {
+        font-family:'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        width: 80%;
+        text-align: start;
+        margin-left: 15%;
+    }
+
+    .getStarted {
+        display: inline-block;
+        margin-right: -2%;
+        margin-top: -5%;
+    }
+
+    .showcaseDrawing {
+        width: 280px;
+        height: 180px;
+    } 
 }

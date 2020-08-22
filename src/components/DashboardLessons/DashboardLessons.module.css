@@ -256,7 +256,7 @@
     .dashlessonsItem {
         /* position: relative; */
         background-color: #f8f8f8;
-        width: 200px;
+        width: 83%;
         border-radius: 8px;
         margin-left: 8%;
         margin-bottom: 2%;
@@ -313,4 +313,30 @@
         padding-bottom: 40px;
     }
     
+}
+
+@media only screen and (max-width: 601px) {
+    .dashlessonsCard {
+        width: 100%;
+        border-radius: 12px;
+        background-color: #fff;
+        margin-left: 1%;
+        margin-top: 4%;
+        margin-bottom: 30%;
+        box-shadow: 0.5px 2px 2px #b3aeae;
+        padding: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .dashlessonsCard {
+        width: 100%;
+        border-radius: 12px;
+        background-color: #fff;
+        margin-left: 1%;
+        margin-top: 4%;
+        margin-bottom: 40%;
+        box-shadow: 0.5px 2px 2px #b3aeae;
+        padding: 10px 0;
+    }
 }

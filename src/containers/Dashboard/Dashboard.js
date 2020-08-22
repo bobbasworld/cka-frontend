@@ -140,7 +140,7 @@ class Dashboard extends Component {
             <Fragment>
                 <div className="container">
                     <div className="row">
-                        <div className="col-6">
+                        <div className="col-lg-6 col-md-6 col-sm-12">
                             <div className={styles.dashboardHeader}>
                                 <div className={styles.dashboardHeaderText}>
                                     <h3 className={styles.dashboardTitle}>Hello, {username}</h3>
@@ -151,7 +151,7 @@ class Dashboard extends Component {
                             <DashboardNewsfeed news={this.state.news} />
                             <DashboardLessons lessons={this.state.lessons} />
                         </div>
-                        <div className="col-6">
+                        <div className="col-lg-6 col-md-6 col-sm-12">
                             <DashboardPrices icons={this.state.icons} prices={this.state.prices} />
                         </div>
                     </div>

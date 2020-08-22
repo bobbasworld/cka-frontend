@@ -13,6 +13,18 @@ const Home = () => {
     }
     return (
         <Fragment>
+            {/* mobile */}
+            <div className={`row ${styles.mobileShowcase}`}>
+                <div className="col">
+                    <img className={styles.showcaseDrawing} src={Drawing} alt="Crypto" />
+                </div>
+                <div className={`col ${styles.showcaseLeft}`}>
+                    <h1 className={styles.showcaseTitle}>Simple and Actionable Crypto Bites</h1>
+                    <p className={styles.showcaseText}>No nonsense crypto tools and strategies created by experts to help you navigate the crypto space with ease.</p>
+                    <Link className={`${styles.getStarted} ${styles.signup}`} to="/signup">Get Started</Link>
+                </div>
+            </div>
+
             <div className={`container ${styles.showcase}`}>
                 <div className="row">
                     <div className={`col ${styles.showcaseLeft}`}>

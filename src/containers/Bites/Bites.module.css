@@ -1,7 +1,6 @@
 .bitesHeader {
     position: relative;
     width: 50%;
-    height: 90px;
     background: #4184f8;
     border-radius: 12px;
     color: #fff;
@@ -23,6 +22,7 @@
     font-size: 14px;
     font-weight: 500;
     margin: 2% 0;
+    padding-bottom: 3%;
 }
 
 .dotsImage1 {
@@ -42,7 +42,6 @@
     .bitesHeader {
         position: relative;
         width: 50%;
-        height: 90px;
         background: #4184f8;
         border-radius: 12px;
         color: #fff;
@@ -64,6 +63,7 @@
         font-size: 14px;
         font-weight: 500;
         margin: 2% 0;
+        padding-bottom: 3%;
     }
     
     .dotsImage1 {
@@ -85,7 +85,6 @@
     .bitesHeader {
         position: relative;
         width: 60%;
-        height: 90px;
         background: #4184f8;
         border-radius: 12px;
         color: #fff;
@@ -107,6 +106,7 @@
         font-size: 13px;
         font-weight: 500;
         margin: 2% 0;
+        padding-bottom: 3%;
     }
     
     .dotsImage1 {
@@ -128,7 +128,6 @@
     .bitesHeader {
         position: relative;
         width: 80%;
-        height: 90px;
         background: #4184f8;
         border-radius: 12px;
         color: #fff;
@@ -150,6 +149,7 @@
         font-size: 13px;
         font-weight: 500;
         margin: 2% 0;
+        padding-bottom: 3%;
     }
     
     .dotsImage1 {
@@ -164,4 +164,34 @@
         left: 83%;
     }
     
+}
+
+@media only screen and (max-width: 600px) {
+    .bitesHeader {
+        position: relative;
+        width: 80%;
+        background: #4184f8;
+        border-radius: 12px;
+        color: #fff;
+        margin-left: 10%;
+        margin-top: 4%;
+        font-family: Montserrat, 'sans-serrif';
+    }
+
+    .bitesTitle {
+        font-size: 16px;
+        font-family: Montserrat, 'sans-serrif';
+        font-weight: 600;
+        width: 60%;
+        margin-left: 20%;
+        padding-top: 7%;
+    }
+
+    .bitesSubtitle {
+        width: 90%;
+        font-size: 11px;
+        padding-left: 10%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
 }
